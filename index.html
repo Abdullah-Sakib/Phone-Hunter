@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phone Hunter</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <h1 class="text-center my-4">Welcome to phone hunter!</h1>
+  </header>
+  <main class="container">
+
+    <!-- search phone  -->
+
+    <section>
+      <div class="mb-3 d-flex ">
+        <input id="input-field" type="email" class="form-control" id="exampleFormControlInput1"
+          placeholder="Search your phone">
+        <button id="search-btn" class="btn btn-primary ms-3">Search</button>
+      </div>
+    </section>
+
+    <!-- no phone found messege  -->
+    <section>
+      <div id="not-found" class="d-none ">
+        <h3 class="text-warning">No phone found. Plese try another search</h3>
+      </div>
+    </section>
+
+    <!-- loading spinner  -->
+
+    <section>
+      <div id="spinner-id" class="text-center p-5 m-5 d-none">
+        <div class="spinner-border text-success" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- phones container  -->
+
+    <section>
+      <div id="phones-container" class="row row-cols-1 row-cols-md-3 g-4">
+      </div>
+    </section>
+
+    <!-- phone details modal  -->
+
+    <section>
+
+      <!-- Modal -->
+      <div class="modal fade" id="details-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="phoneName"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal-body">
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- show all  -->
+
+    <section id="showAll" class="d-flex justify-content-center my-3 d-none">
+      <button id="showAll-btn" class="btn btn-primary">Show All</button>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
